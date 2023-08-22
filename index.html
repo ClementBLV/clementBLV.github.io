@@ -1,0 +1,138 @@
+---
+layout: landing
+---
+
+<section id="banner">
+	<div class="inner">
+		<h2>{{ site.title }}</h2>
+		<p>{{ site.description | markdownify }}</p>
+	</div>
+	<a href="#software" class="more scrolly">Learn More</a>
+</section>
+
+<section id="software" class="wrapper style1 special">
+	<div class="inner">
+		<header class="major">
+			<h3>Software</h3>
+		</header>
+
+		<ul class="features">
+			<li class="icon fa-beer" style="width:90%">
+				<h3>The Beer Feed</h3>
+
+				<p>
+					Test of teh first section <a href="https://youtube.com" target="_blank">here</a>.
+				</p>
+
+				<a href="https://youtube.com" target="_blank" class="button special">
+					Live Version
+				</a>
+
+				<table>
+					<tr>
+						<td>
+							<img src="https://pngimg.com/uploads/pokemon/pokemon_PNG14.png" style="width: 100%; height: auto;"/>
+						</td>
+						<td>
+							<img src="https://pngimg.com/uploads/pokemon/pokemon_PNG15.png" style="width: 100%; height: auto;"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<img src="https://i.pinimg.com/originals/e4/1f/2c/e41f2cf28f6d1a75f446ecc7740104f1.png" style="width: 100%; height: auto;"/>
+						</td>
+						<td>
+							<img src="https://lh3.googleusercontent.com/-X45kG27TP10/W64utgkaPjI/AAAAAAAAFYM/ZW_Xf-pKjiccMCi2j9OYB87vy-cuN3LRwCHMYCw/s1600/Screenshot_2018-09-28-09-32-59-1.png" style="width: 100%; height: auto;"/>
+						</td>
+					</tr>
+				</table>
+
+			</li>
+		</ul>
+	</div>
+</section>
+
+<section id="research" class="wrapper style2 special">
+	<div class="inner">
+		<header class="major">
+			<h3>Research</h3>
+			<p>I was previously a graduate student at The Rochester Insitute of Technology<br/>
+			 	 and before that was an undergrad at The University of Minnesota.</p>
+		</header>
+
+		<ul class="features">
+			<li class="icon fa-flask" style="width:90%">
+				<h3>Software Transactional Memory with Continuations</h3>
+				<h5>Authors: Matthew Le and Matthew Fluet</h5>
+
+				<p>
+					Software Transactional Memory (STM) is a concurrency abstraction, where programmers denote transactions with an atomic construct that delimits a collection of reads and writes to shared mutable references. The runtime system then guarantees that all transactions are observed to execute atomically with respect to each other. Traditionally, when the runtime system detects that one transaction conflicts with another, it aborts one of the transactions and restarts its execution from the beginning. This can lead to problems with both execution time and throughput. In this work, we developed a novel approach that uses first-class continuations to restart a conflicting transaction at the point of a conflict, avoiding the re-execution of any work from the beginning of the transaction that has not been compromised. In practice, this allows transactions to complete more quickly, decreasing execution time and increasing throughput. 
+				</p>
+
+				<a href="https://dl.acm.org/citation.cfm?id=2784736" target="_blank" class="button special">
+					Read The Paper
+				</a>
+			</li>
+
+			<li class="icon fa-flask" style="width:90%">
+				<h3>Practical and Effective Higher-Order Optimization</h3>
+				<h5>Authors: Lars Bergstrom, Matthew Fluet, Matthew Le, John Reppy, and Nora Sandler.</h5>
+				<p>
+					Inlining is an optimization that replaces a call to a function with that function's body. Another optimization, copy propagation, replaces a redundant copy of a still-live variable with the original.  These two optimizations are practical to implement and effective in first-order languages, but in languages with lexically-scoped first-class functions (aka, closures), these optimizations are not available to code programmed in a higher-order style. With higher-order functions, the analysis challenge has been that the environment at the call site must be the same as at the closure capture location, up to the free variables, or the meaning of the program may change. Olin Shivers' 1991 dissertation called this family of optimizations superΒ and he proposed one analysis technique, called reflow, to support these optimizations. Unfortunately, reflow has proven too expensive to implement in practice. This work provides the first practical and effective technique for higher-order inlining and copy propagation, which we call unchanged variable analysis.
+				</p>
+
+				<a href="https://dl.acm.org/citation.cfm?id=2628153" target="_blank" class="button special">
+					Read The Paper
+				</a>
+			</li>
+
+			<li class="icon fa-flask" style="width: 90%">
+				<h3>Tracking and Detecting Ocean Eddies</h3>
+				<p>
+					Ocean eddies are spinning pools of water in the ocean that dominate the ocean's kinetic energy, making them an important phenomenon to monitor. As an undergrad I worked with the Minnesota Expeditions Research group on designing algorithms for detecting and tracking eddies.  
+				</p>
+
+				<h4>Papers:</h4>
+
+				<a href="https://www.aaai.org/ocs/index.php/AAAI/AAAI13/paper/view/6495" target="_blank" class="button special">
+					AAAI 2013
+				</a>
+				<a href="https://dx.doi.org/10.1109/ICDM.2013.162" target="_blank" class="button special">
+					ICDM 2013
+				</a>
+				<a href="https://www.aaai.org/ocs/index.php/AAAI/AAAI14/paper/view/8659" target="_blank" class="button special">
+					AAAI 2014
+				</a>
+
+			</li>
+
+		</ul>
+	</div>
+</section>
+
+
+<section id="homebrewing" class="wrapper style3 special">
+	<div class="inner">
+		<header class="major">
+			<h2>Homebrewing</h2>
+			<p>
+				In addition to developing software, I am also an amateur homebrewer.<br/>
+				Below is an (incomplete) collection of beers that I have made in the past
+			</p>
+		</header>
+		<ul class="features">
+			{% for post in site.posts %}
+				{% if post.type == "homebrew_recipe" %}
+			    <li class="icon fa-beer">
+			    	<h3>{{ post.title }}</h3>
+			    	<h5>Brewed on: {{ post.brew_date }}</h5>
+			    	<p>{{ post.short_description }}</p>
+			    	<a href="{{ post.page_url }}" class="button special">
+							More Info
+						</a>
+			    </li>
+		    {% endif %}
+		  {% endfor %}
+		</ul>
+	</div>
+</section>

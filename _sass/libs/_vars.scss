@@ -49,8 +49,8 @@
 		accent1: (
 			bg:				#8BC8FF,
 			fg-bold:		#ffffff,
-			fg:				mix(#21b2a6, #ffffff, 25%),
-			fg-light:		mix(#21b2a6, #ffffff, 40%),
+			fg:				mix(#8BC8FF, #ffffff, 25%),
+			fg-light:		mix(#8BC8FF, #ffffff, 40%),
 			border:			rgba(0,0,0,0.125),
 			border-bg:		rgba(255,255,255,0.075),
 			border2:		rgba(0,0,0,0.25),
@@ -60,8 +60,8 @@
 		accent2: (
 			bg:				#2274A5,
 			fg-bold:		#ffffff,
-			fg:				mix(#00ffcc, #ffffff, 25%),
-			fg-light:		mix(#00ffcc, #ffffff, 40%),
+			fg:				mix(#2274A5, #ffffff, 25%),
+			fg-light:		mix(#2274A5, #ffffff, 40%),
 			border:			rgba(0,0,0,0.125),
 			border-bg:		rgba(255,255,255,0.075),
 			border2:		rgba(0,0,0,0.25),
@@ -93,8 +93,8 @@
 		accent5: (
 			bg:				#2986CC,
 			fg-bold:		#ffffff,
-			fg:				mix(#505393, #ffffff, 25%),
-			fg-light:		mix(#505393, #ffffff, 40%),
+			fg:				mix(#2986CC, #ffffff, 25%),
+			fg-light:		mix(#2986CC, #ffffff, 40%),
 			border:			rgba(0,0,0,0.125),
 			border-bg:		rgba(255,255,255,0.075),
 			border2:		rgba(0,0,0,0.25),
@@ -104,8 +104,8 @@
 		accent6: (
 			bg:				#C4A7A7,
 			fg-bold:		#ffffff,
-			fg:				mix(#ed4933, #ffffff, 25%),
-			fg-light:		mix(#ed4933, #ffffff, 40%),
+			fg:				mix(#C4A7A7, #ffffff, 25%),
+			fg-light:		mix(#C4A7A7, #ffffff, 40%),
 			border:			rgba(0,0,0,0.125),
 			border-bg:		rgba(255,255,255,0.075),
 			border2:		rgba(0,0,0,0.25),
@@ -121,5 +121,17 @@
 			border-bg:		rgba(0,0,0,0.0375),
 			border2:		#bfbfbf,
 			border2-bg:		rgba(0,0,0,0.1)
+		), 
+		accent8: (
+			bg:				#ffffff,
+			fg-bold:		##FFBF00,
+			fg:				#4E4852,
+			fg-light:		#8E8892,
+			border:			#dfdfdf,
+			border-bg:		rgba(0,0,0,0.0375),
+			border2:		#bfbfbf,
+			border2-bg:		rgba(0,0,0,0.1)
 		)
+
+
 	);

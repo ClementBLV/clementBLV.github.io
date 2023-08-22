@@ -1,0 +1,25 @@
+# Welcome to Jekyll!
+#
+
+# Site settings
+title: Clément BELIVEAU
+description: |
+  Student at IMT 
+  Atlantique 
+owner: Clément BELIVEAU # or company name
+first_published: 2023 # if migrating another site, the year of your first publish
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://clementblv.github.io" # the base hostname & protocol for your site
+social:
+  github: https://github.com/
+  linkedin-square: https://www.linkedin.com/
+  #spotify:
+  #stack-overflow: http://stackoverflow.com/users/4876946/matt
+
+# Build settings
+markdown: kramdown
+#sass:
+#  style: compressed
+exclude:
+  - templates
+future: true

@@ -35,8 +35,8 @@ layout: landing
 
 						.round-image {
 							display: block;
-							max-width: 200px; /* Ensure the image does not exceed its container width */
-							border-radius: 100%; /* Make the image round */
+							max-width: 100px; /* Ensure the image does not exceed its container width */
+							border-radius: 50%; /* Make the image round */
 						}
 						
 						.image-container {
@@ -48,14 +48,6 @@ layout: landing
 						.cropped-image {
 							width: 100%; /* Set the width of the image to 100% of the container */
 							height: auto; /* Auto-adjust the height to maintain the image's aspect ratio */
-						}
-						
-						body {
-							display: flex;
-							justify-content: center;
-							align-items: center;
-							height: 100vh;
-							margin: 0;
 						}
 		
 						.carousel-container {
@@ -104,7 +96,6 @@ layout: landing
 					<div class="image-container">
 						<img class="cropped-image" src="images/carroussel.gif" alt="Cropped Carroussel">
 					</div>
-					<body>
 						<div class="carousel-container">
 							<img  class="carousel-image" src="images/spacy.png" alt="Image 1">
 							<img  class="carousel-image" src="images/julia.png" alt="Image 2">
@@ -125,9 +116,9 @@ layout: landing
 								nextImage.classList.add("active");
 							}
 
-							setInterval(changeImage, 2000); // Change image every 2 seconds
+							setInterval(changeImage, 4000); // Change image every 2 seconds
 						</script>  
-					</body>
+
 					<p>
 						During my studies, I have done a gap year of one year during wich I was able to work 
 						in various companies and gain many skill. As a matter of fact I am really I can programm 

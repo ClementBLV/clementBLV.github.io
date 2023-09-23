@@ -35,13 +35,13 @@ layout: landing
 
 						.round-image {
 							display: block;
-							max-width: 150px; /* Ensure the image does not exceed its container width */
-							border-radius: 50%; /* Make the image round */
+							max-width: 200px; /* Ensure the image does not exceed its container width */
+							border-radius: 100%; /* Make the image round */
 						}
 						
 						.image-container {
-							width: 500px; /* Set the width of the container */
-							height: 300px; /* Set the height of the container */
+							width: 1800px; /* Set the width of the container */
+							height: 1300px; /* Set the height of the container */
 							overflow: hidden; /* Hide the overflowing part of the image */
 						}
 
@@ -57,9 +57,10 @@ layout: landing
 						}
 
 						.carousel-image {
+							width: 400px; /* Set a fixed width for all images */
+							height: 300px; /* Set a fixed height for all images */
+							object-fit: cover;
 							position: absolute;
-							width: 100%;
-							height: 100%;
 							opacity: 0;
 							transition: opacity 1s ease-in-out;
 						}
@@ -95,9 +96,9 @@ layout: landing
 						<img class="cropped-image" src="images/carroussel.gif" alt="Cropped Carroussel">
 					</div>
 					<div class="carousel-container">
-						<img class="images/spacy.jpg" src="image1.jpg" alt="Image 1">
-						<img class="images/julia.jpg" src="image2.jpg" alt="Image 2">
-						<img class="images/jenkins.jpg" src="image3.jpg" alt="Image 3">
+						<img  class="carousel-image" src="images/spacy.png" alt="Image 1">
+						<img  class="carousel-image" src="images/julia.png" alt="Image 2">
+						<img  class="carousel-image" src="images/jenkins.png" alt="Image 3">
 					</div>
 
 					<script>

@@ -33,11 +33,16 @@ layout: landing
 
 						.image-container {
 							flex: 1; /* Allow the image container to grow and take available space */
+							display: flex;
+							justify-content: flex-end; /* Align the image to the right within the container */
+							overflow: hidden; /* Hide any overflowing image */
 						}
 
 						.round-image {
-							display: block;
-							max-width: 100px; /* Ensure the image does not exceed its container width */
+							width: auto; /* Allow the image to automatically adjust its width */
+							height: auto; /* Allow the image to automatically adjust its height */
+							max-width: 100%; /* Ensure the image does not exceed its container width */
+							max-height: 100%; /* Ensure the image does not exceed its container height */
 							border-radius: 50%; /* Make the image round */
 						}
 									

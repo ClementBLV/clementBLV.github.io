@@ -40,8 +40,8 @@ layout: landing
 						}
 						
 						.image-container {
-							width: 1800px; /* Set the width of the container */
-							height: 1300px; /* Set the height of the container */
+							width: 800px; /* Set the width of the container */
+							height: 500px; /* Set the height of the container */
 							overflow: hidden; /* Hide the overflowing part of the image */
 						}
 
@@ -49,17 +49,26 @@ layout: landing
 							width: 100%; /* Set the width of the image to 100% of the container */
 							height: auto; /* Auto-adjust the height to maintain the image's aspect ratio */
 						}
+						
+						body {
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							height: 100vh;
+							margin: 0;
+						}
+		
 						.carousel-container {
 							position: relative;
-							width: 300px;
-							height: 200px;
+							width: 500px;
+							height: 300px;
 							overflow: hidden;
 						}
 
 						.carousel-image {
-							width: 400px; /* Set a fixed width for all images */
-							height: 300px; /* Set a fixed height for all images */
-							object-fit: cover;
+							width: 100%;
+							height: 100%;
+							object-fit: contain; /* Automatically fit the image to the container while maintaining aspect ratio */
 							position: absolute;
 							opacity: 0;
 							transition: opacity 1s ease-in-out;
@@ -95,28 +104,30 @@ layout: landing
 					<div class="image-container">
 						<img class="cropped-image" src="images/carroussel.gif" alt="Cropped Carroussel">
 					</div>
-					<div class="carousel-container">
-						<img  class="carousel-image" src="images/spacy.png" alt="Image 1">
-						<img  class="carousel-image" src="images/julia.png" alt="Image 2">
-						<img  class="carousel-image" src="images/jenkins.png" alt="Image 3">
-					</div>
+					<body>
+						<div class="carousel-container">
+							<img  class="carousel-image" src="images/spacy.png" alt="Image 1">
+							<img  class="carousel-image" src="images/julia.png" alt="Image 2">
+							<img  class="carousel-image" src="images/jenkins.png" alt="Image 3">
+						</div>
 
-					<script>
-						const images = document.querySelectorAll(".carousel-image");
-						let currentImageIndex = 0;
+						<script>
+							const images = document.querySelectorAll(".carousel-image");
+							let currentImageIndex = 0;
 
-						function changeImage() {
-							const currentImage = images[currentImageIndex];
-							currentImage.classList.remove("active");
+							function changeImage() {
+								const currentImage = images[currentImageIndex];
+								currentImage.classList.remove("active");
 
-							currentImageIndex = (currentImageIndex + 1) % images.length;
+								currentImageIndex = (currentImageIndex + 1) % images.length;
 
-							const nextImage = images[currentImageIndex];
-							nextImage.classList.add("active");
-						}
+								const nextImage = images[currentImageIndex];
+								nextImage.classList.add("active");
+							}
 
-						setInterval(changeImage, 2000); // Change image every 2 seconds
-					</script>   
+							setInterval(changeImage, 2000); // Change image every 2 seconds
+						</script>  
+					</body>
 					<p>
 						During my studies, I have done a gap year of one year during wich I was able to work 
 						in various companies and gain many skill. As a matter of fact I am really I can programm 

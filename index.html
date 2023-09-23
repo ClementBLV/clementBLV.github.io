@@ -35,7 +35,7 @@ layout: landing
 
 						.round-image {
 							display: block;
-							max-width: 100%; /* Ensure the image does not exceed its container width */
+							max-width: 150px; /* Ensure the image does not exceed its container width */
 							border-radius: 50%; /* Make the image round */
 						}
 						
@@ -48,6 +48,24 @@ layout: landing
 						.cropped-image {
 							width: 100%; /* Set the width of the image to 100% of the container */
 							height: auto; /* Auto-adjust the height to maintain the image's aspect ratio */
+						}
+						.carousel-container {
+							position: relative;
+							width: 300px;
+							height: 200px;
+							overflow: hidden;
+						}
+
+						.carousel-image {
+							position: absolute;
+							width: 100%;
+							height: 100%;
+							opacity: 0;
+							transition: opacity 1s ease-in-out;
+						}
+
+						.active {
+							opacity: 1;
 						}
 					</style>
 				</head>
@@ -76,7 +94,28 @@ layout: landing
 					<div class="image-container">
 						<img class="cropped-image" src="images/carroussel.gif" alt="Cropped Carroussel">
 					</div>
-					   
+					<div class="carousel-container">
+						<img class="images/spacy.jpg" src="image1.jpg" alt="Image 1">
+						<img class="images/julia.jpg" src="image2.jpg" alt="Image 2">
+						<img class="images/jenkins.jpg" src="image3.jpg" alt="Image 3">
+					</div>
+
+					<script>
+						const images = document.querySelectorAll(".carousel-image");
+						let currentImageIndex = 0;
+
+						function changeImage() {
+							const currentImage = images[currentImageIndex];
+							currentImage.classList.remove("active");
+
+							currentImageIndex = (currentImageIndex + 1) % images.length;
+
+							const nextImage = images[currentImageIndex];
+							nextImage.classList.add("active");
+						}
+
+						setInterval(changeImage, 2000); // Change image every 2 seconds
+					</script>   
 					<p>
 						During my studies, I have done a gap year of one year during wich I was able to work 
 						in various companies and gain many skill. As a matter of fact I am really I can programm 

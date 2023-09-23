@@ -38,18 +38,32 @@ layout: landing
 							max-width: 100%; /* Ensure the image does not exceed its container width */
 							border-radius: 50%; /* Make the image round */
 						}
+						
+						.image-container {
+							width: 200px; /* Set the width of the container */
+							height: 150px; /* Set the height of the container */
+							overflow: hidden; /* Hide the overflowing part of the image */
+						}
+
+						.cropped-image {
+							width: 100%; /* Set the width of the image to 100% of the container */
+							height: auto; /* Auto-adjust the height to maintain the image's aspect ratio */
+						}
 					</style>
 				</head>
 				<body>
-					<h1>Text with Image</h1>
 					<div class="container">
 						<div class="image-container">
 							<a href="https://www.linkedin.com/in/cl%C3%A9ment-beliveau/">
-								<img class="round-image" src="images/profile.jpg" alt="Image Description">
+								<img class="round-image" src="images/profile.JPG" alt="Image Description">
 							</a>
 							
 						<p class="text">
-							My name is Clément BELIVEAU, I am a french ingeneer specialized in computer science and most especially in artificial intelligence. I have studied software ingeenering at <a href="" target="_blank">IMT Atlantique</a> and I have specialized in Natural Language Processing during one semester at  <a href="" target="_blank">KAIST</a> in South Korea. 
+							My name is Clément BELIVEAU, I am a french ingeneer specialized in computer science 
+							and most especially in artificial intelligence. I have studied software ingeenering 
+							at <a href="" target="_blank">IMT Atlantique</a> and I have specialized in Natural 
+							Language Processing during one semester at  <a href="" target="_blank">KAIST</a> in 
+							South Korea. 
 						</p>
 						
 					</div>
@@ -57,10 +71,17 @@ layout: landing
 				
 			</li>
 			<li class="icon fa-briefcase" style="width:90%">
+
 				<h3>Works and Competenses </h3>
-					    <img src="images/carroussel.gif"/>
+					<div class="image-container">
+						<img class="cropped-image" src="images/carroussel.gif" alt="Cropped Carroussel">
+					</div>
+					   
 					<p>
-						During my studies, I have done a gap year of one year during wich I was able to work in various companies and gain many skill. As a matter of fact I am really I can programm in Java, Python which are my main languages, but also in Julia. I am also accointed with the management tool like JIRA and the develepment and deployement tool like Jenkins and Git.   .
+						During my studies, I have done a gap year of one year during wich I was able to work 
+						in various companies and gain many skill. As a matter of fact I am really I can programm 
+						in Java, Python which are my main languages, but also in Julia. I am also accointed with 
+						the management tool like JIRA and the develepment and deployement tool like Jenkins and Git.   .
 					</p>
 			</li>
 		</ul>

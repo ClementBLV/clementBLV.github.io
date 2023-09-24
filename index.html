@@ -93,11 +93,18 @@ layout: landing
 
 						.cropped-image {
 							width: 100%; /* Set the width of the image to 100% of the container */
-							height: calc(100% - 50px); /* Set the height to 100% minus 100px (to crop 100px from the bottom) */
+							height: calc(100% - 150px); /* Set the height to 100% minus 100px (to crop 100px from the bottom) */
 							object-fit: cover; /* Crop the image while maintaining aspect ratio */
 							margin-top: -100px; /* Remove 50px from the top of the image */
 						}
 						
+						.center-container {
+							display: flex;
+							justify-content: center; /* Center horizontally */
+							align-items: center; /* Center vertically */
+							min-height: 100vh; /* Ensure the entire viewport height is covered */
+							margin: 0; /* Remove default margin */
+						}
 						.carousel-container {
 							position: relative;
 							width: 500px;
@@ -122,12 +129,13 @@ layout: landing
 					<div class="image-container">
 						<img class="cropped-image" src="images/carroussel.gif" alt="Cropped Carroussel">
 					</div>
-						<div class="carousel-container">
-							<img  class="carousel-image" src="images/spacy.png" alt="Image 1">
-							<img  class="carousel-image" src="images/julia.png" alt="Image 2">
-							<img  class="carousel-image" src="images/jenkins.png" alt="Image 3">
+						<div class="center-container">
+							<div class="carousel-container">
+								<img  class="carousel-image" src="images/spacy.png" alt="Image 1">
+								<img  class="carousel-image" src="images/julia.png" alt="Image 2">
+								<img  class="carousel-image" src="images/jenkins.png" alt="Image 3">
+							</div>
 						</div>
-
 						<script>
 							const images = document.querySelectorAll(".carousel-image");
 							let currentImageIndex = 0;

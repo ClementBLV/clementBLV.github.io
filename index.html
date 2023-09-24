@@ -22,27 +22,34 @@ layout: landing
 					<style>
 						.container {
 							display: flex;
-							align-items: center; /* Center items vertically */
+							height: 300px;
+						}
+
+						.left {
+							flex: 1;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							/*background-color: #e0e0e0; Set a background color for the left square */
+						}
+
+						.right {
+							flex: 1;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							/*background-color: #f0f0f0;  Set a background color for the right square */
+						}
+
+						.image {
+							max-height: 100%;
+							max-width: 100%; /* Ensure the image fits within the square */
+							object-fit: contain; /* Maintain aspect ratio and fit the image */
 						}
 
 						.text {
-							flex: 1; /* Allow text to grow and take available space */
-
-						}
-
-						.image-container {
-							display: flex;
-							align-items: center; /* Center the image vertically within its container */
-							justify-content: flex-start; /* Align the image to the left within its container */
-							overflow: hidden; /* Hide any overflowing image */
-						}
-
-						.round-image {
-							width: auto; /* Allow the image to automatically adjust its width */
-							height: auto; /* Allow the image to automatically adjust its height */
-							max-width: 200px; /* Ensure the image does not exceed its container width */
-							max-height: 200px; /* Ensure the image does not exceed its container height */
-							border-radius: 50%; /* Make the image round */
+							/*font-size: 18px;*/
+							text-align: center;
 						}
 									
 					</style>	
@@ -50,19 +57,21 @@ layout: landing
 				</head>
 				<body>
 					<div class="container">
-						<div class="image-container">
+						<div class="left">
 							<a href="https://www.linkedin.com/in/cl%C3%A9ment-beliveau/">
 								<img class="round-image" src="images/profile.JPG" alt="Image Description">
 							</a>
 						</div>	
-						<p class="text">
-							My name is Clément BELIVEAU, I am a french ingeneer specialized in computer science 
-							and most especially in artificial intelligence. I have studied software ingeenering 
-							at <a href="" target="_blank">IMT Atlantique</a> and I have specialized in Natural 
-							Language Processing during one semester at  <a href="" target="_blank">KAIST</a> in 
-							South Korea. 
-						</p>
-						
+						<div class="right">
+
+							<p class="text">
+								My name is Clément BELIVEAU, I am a french ingeneer specialized in computer science 
+								and most especially in artificial intelligence. I have studied software ingeenering 
+								at <a href="" target="_blank">IMT Atlantique</a> and I have specialized in Natural 
+								Language Processing during one semester at  <a href="" target="_blank">KAIST</a> in 
+								South Korea. 
+							</p>
+						</div>
 					</div>
 				</body>
 				

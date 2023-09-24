@@ -89,16 +89,15 @@ layout: landing
 							width: 700px; /* Set the width of the container */
 							height: 400px; /* Set the height of the container */
 							overflow: hidden; /* Hide the overflowing part of the image */
-							margin-top: 50px; /* Remove 10 pixels from the top of the image */
-							margin-bottom: 100px; /* Remove 20 pixels from the bottom of the image */
-
 						}
 
 						.cropped-image {
 							width: 100%; /* Set the width of the image to 100% of the container */
-							height: auto; /* Auto-adjust the height to maintain the image's aspect ratio */
+							height: calc(100% - 100px); /* Set the height to 100% minus 100px (to crop 100px from the bottom) */
+							object-fit: cover; /* Crop the image while maintaining aspect ratio */
+							margin-top: -50px; /* Remove 50px from the top of the image */
 						}
-		
+						
 						.carousel-container {
 							position: relative;
 							width: 500px;

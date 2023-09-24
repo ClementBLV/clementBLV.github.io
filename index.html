@@ -95,7 +95,7 @@ layout: landing
 							width: 100%; /* Set the width of the image to 100% of the container */
 							height: calc(100% - 140px); /* Set the height to 100% minus 100px (to crop 100px from the bottom) */
 							object-fit: cover; /* Crop the image while maintaining aspect ratio */
-							margin-top: -5px; /* Remove 50px from the top of the image */
+							margin-top: -3px; /* Remove 50px from the top of the image */
 						}
 						
 						.center-container {
@@ -154,15 +154,18 @@ layout: landing
 
 							function changeImage() {
 								const currentImage = images[currentImageIndex];
-								currentImage.classList.remove("active");
+								currentImage.style.transition = "opacity 1s ease-in-out, transform 1s ease-in-out";
+								currentImage.style.opacity = "0.5"; // Reduce opacity by 50%
+								currentImage.style.transform = "translateX(-100%)";
 
 								currentImageIndex = (currentImageIndex + 1) % images.length;
 
 								const nextImage = images[currentImageIndex];
+								nextImage.style.transition = "opacity 1s ease-in-out, transform 1s ease-in-out";
+								nextImage.style.opacity = "0.5"; // Reduce opacity by 50%
+								nextImage.style.transform = "translateX(0%)";
 								nextImage.classList.add("active");
 							}
-
-							setInterval(changeImage, 3000); // Change image every 3 seconds
 						</script>  
 
 					<p>

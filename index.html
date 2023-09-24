@@ -93,9 +93,9 @@ layout: landing
 
 						.cropped-image {
 							width: 100%; /* Set the width of the image to 100% of the container */
-							height: calc(100% - 140px); /* Set the height to 100% minus 100px (to crop 100px from the bottom) */
+							height: calc(100% - 135px); /* Set the height to 100% minus 100px (to crop 100px from the bottom) */
 							object-fit: cover; /* Crop the image while maintaining aspect ratio */
-							margin-top: -3px; /* Remove 50px from the top of the image */
+							margin-top: -1px; /* Remove 50px from the top of the image */
 						}
 						
 						.center-container {
@@ -156,16 +156,24 @@ layout: landing
 								const currentImage = images[currentImageIndex];
 								currentImage.style.transition = "opacity 1s ease-in-out, transform 1s ease-in-out";
 								currentImage.style.opacity = "0.5"; // Reduce opacity by 50%
-								currentImage.style.transform = "translateX(-100%)";
+								currentImage.style.transform = "translateX(-50%)"; // Slide to the left
 
-								currentImageIndex = (currentImageIndex + 1) % images.length;
+								setTimeout(() => {
+									currentImage.style.transition = "none"; // Disable transitions for instant changes
+									currentImage.style.opacity = "0"; // Hide the previous image completely
+									currentImage.style.transform = "translateX(0)"; // Reset position
 
-								const nextImage = images[currentImageIndex];
-								nextImage.style.transition = "opacity 1s ease-in-out, transform 1s ease-in-out";
-								nextImage.style.opacity = "0.5"; // Reduce opacity by 50%
-								nextImage.style.transform = "translateX(0%)";
-								nextImage.classList.add("active");
+									currentImageIndex = (currentImageIndex + 1) % images.length;
+
+									const nextImage = images[currentImageIndex];
+									nextImage.style.transition = "opacity 1s ease-in-out, transform 1s ease-in-out";
+									nextImage.style.opacity = "0.5"; // Reduce opacity by 50%
+									nextImage.style.transform = "translateX(50%)"; // Slide in from the right
+									nextImage.classList.add("active");
+								}, 1000); // Wait for 1 second (the same duration as the transitions)
 							}
+
+							setInterval(changeImage, 3000); // Change image every 3 seconds
 						</script>  
 
 					<p>

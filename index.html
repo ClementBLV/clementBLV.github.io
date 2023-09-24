@@ -95,7 +95,7 @@ layout: landing
 							width: 100%; /* Set the width of the image to 100% of the container */
 							height: calc(100% - 150px); /* Set the height to 100% minus 100px (to crop 100px from the bottom) */
 							object-fit: cover; /* Crop the image while maintaining aspect ratio */
-							margin-top: -50px; /* Remove 50px from the top of the image */
+							margin-top: -20px; /* Remove 50px from the top of the image */
 						}
 						
 						.center-container {
@@ -115,7 +115,11 @@ layout: landing
 							border: 1px solid black; /* Add a black border around the container */
 
 						}
-
+						
+						.carousel-content {
+							height: 100%; /* Make the height of .center-container equal to .carousel-container */
+						}
+						
 						.carousel-image {
 							width: 100%;
 							height: 100%;
@@ -135,9 +139,12 @@ layout: landing
 					</div>
 						<div class="center-container">
 							<div class="carousel-container">
-								<img  class="carousel-image" src="images/spacy.png" alt="Image 1">
-								<img  class="carousel-image" src="images/julia.png" alt="Image 2">
-								<img  class="carousel-image" src="images/jenkins.png" alt="Image 3">
+								<div class="carousel-content">
+
+									<img  class="carousel-image" src="images/spacy.png" alt="Image 1">
+									<img  class="carousel-image" src="images/julia.png" alt="Image 2">
+									<img  class="carousel-image" src="images/jenkins.png" alt="Image 3">
+								</div>
 							</div>
 						</div>
 						<script>

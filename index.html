@@ -32,15 +32,16 @@ layout: landing
 
 						.image-container {
 							display: flex;
-							justify-content: center; /* Align the image to the right within the container */
+							align-items: center; /* Center the image vertically within its container */
+							justify-content: flex-start; /* Align the image to the left within its container */
 							overflow: hidden; /* Hide any overflowing image */
 						}
 
 						.round-image {
 							width: auto; /* Allow the image to automatically adjust its width */
 							height: auto; /* Allow the image to automatically adjust its height */
-							max-width: 500px; /* Ensure the image does not exceed its container width */
-							max-height: 500px; /* Ensure the image does not exceed its container height */
+							max-width: 200px; /* Ensure the image does not exceed its container width */
+							max-height: 200px; /* Ensure the image does not exceed its container height */
 							border-radius: 50%; /* Make the image round */
 						}
 									
